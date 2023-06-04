@@ -1,4 +1,4 @@
-FROM nginx:1.15
-COPY build /etc/nginx/html
-COPY conf /etc/nginx
-
+FROM nginx:alpine
+COPY build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
